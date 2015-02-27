@@ -1,9 +1,10 @@
+<%= javascript_include_tag :defaults %>
+<%= csrf_meta_tags %>
+
 <nav class="navbar navbar-default navbar-fixed-top navbar-collapse">
   <div class="container">
 
-    <a class="navbar-brand" href="#">Pintacious</a>
-
-
+    <%= link_to "PINTACIOUS", root_path, class: "navbar-brand" %>
 
     <ul class="nav navbar-nav navbar-collapse">
 
@@ -12,8 +13,14 @@
     </ul>
 
 
+    <% if user_signed_in? %>
+        <%=link_to "Sign out", destroy_user_session_path, :method => :delete, class: "btn btn-default navbar-btn pull-right"%>
+        <%=link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default navbar-btn pull-right"%>
+    <% else %>
+        <%=link_to "Sign in", new_user_session_path, class: "btn btn-default navbar-btn pull-right"%>
+    <% end %>
 
-    <button type="button" class="btn btn-default navbar-btn pull-right">Sign in</button>
+
 
   </div>
 </nav>

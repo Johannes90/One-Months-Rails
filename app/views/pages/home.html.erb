@@ -1,14 +1,20 @@
+<% if user_signed_in? %>
+    <div class="jumbotron">
+      <h1>You are logged in!</h1>
+    </div>
 
+<% else %>
 
-<div class="jumbotron">
-<h1>Welcome to Pintacious!</h1>
+    <div class="jumbotron">
+    <h1>Welcome to Pintacious!</h1>
 
-<p>
-  You have found the Home Page for the Pintacious
-  application.
+    <p>
+      You have found the Home Page for the Pintacious
+      application.
 
-</p>
+    </p>
+        <%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-lg"%>
 
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign Up Now</a></p>
+    </div>
 
-</div>
+<% end %>
