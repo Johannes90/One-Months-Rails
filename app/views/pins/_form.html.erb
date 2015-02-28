@@ -1,0 +1,15 @@
+<%= simple_form_for(@pin, html: { class: 'form-horizontal' }, wrapper: :horizontal_form) do |f| %>
+  <%= f.error_notification %>
+
+
+    <%= f.input :description, as: :text, input_html: { rows: '3' , :style=> 'width: 250px'} %>
+
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      </div>
+    </div>
+
+
+<% end %>
