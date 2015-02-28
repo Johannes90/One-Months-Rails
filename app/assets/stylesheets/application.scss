@@ -1,13 +1,14 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body { padding-top: 70px; background: image-url("sunglasses.jpg"); color: lightgrey}
+body { padding-top: 70px; background: asset-data-url("sunglasses.jpg"); color: lightgrey}
 
 .jumbotron {color: darkslategrey;
 
 }
 
-.alert {color: orangered
+.alert {color: orangered}
 
 
-}
+.well { color: black}
+
